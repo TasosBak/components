@@ -35,6 +35,8 @@ const App = () => {
           avatar={faker.image.avatar()}
         />
       </ApprovalCard>
+
+      <ApprovalCard>Do we get how that works?</ApprovalCard>
     </div>
   );
 };
