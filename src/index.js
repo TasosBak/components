@@ -1,71 +1,30 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import CommentDetail from "./CommentsDetail";
 import faker from "faker";
 
 const App = () => {
   return (
     <div className="ui container comments">
       <h3 className="ui dividing header">Comments</h3>
-
-      <div className="comment">
-        <a href="/" className="avatar">
-          <img alt="profile pic" src={faker.image.avatar()} />
-        </a>
-        <div className="content">
-          <a href="/" className="author">
-            Alkara
-          </a>
-          <div className="metadata">
-            <span className="date">Today at 5:42PM</span>
-          </div>
-          <div className="text">Much artistic!</div>
-          <div className="actions">
-            <a href="/" className="reply">
-              Reply
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div className="comment">
-        <a href="/" className="avatar">
-          <img alt="profile pic" src={faker.image.avatar()} />
-        </a>
-        <div className="content">
-          <a href="/" className="author">
-            Than
-          </a>
-          <div className="metadata">
-            <span className="date">Today at 5:42PM</span>
-          </div>
-          <div className="text">Much artistic!</div>
-          <div className="actions">
-            <a href="/" className="reply">
-              Reply
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div className="comment">
-        <a href="/" className="avatar">
-          <img alt="profile pic" src={faker.image.avatar()} />
-        </a>
-        <div className="content">
-          <a href="/" className="author">
-            Tasos
-          </a>
-          <div className="metadata">
-            <span className="date">Today at 5:42PM</span>
-          </div>
-          <div className="text">Much artistic!</div>
-          <div className="actions">
-            <a href="/" className="reply">
-              Reply
-            </a>
-          </div>
-        </div>
-      </div>
+      <CommentDetail
+        author="Jane"
+        timeAgo="Today at 05:03 AM"
+        commentText={faker.lorem.sentence()}
+        avatar={faker.image.avatar()}
+      />
+      <CommentDetail
+        author="Tarzan"
+        timeAgo="Today at 06:03 AM"
+        commentText={faker.lorem.sentence()}
+        avatar={faker.image.avatar()}
+      />
+      <CommentDetail
+        author="Bill"
+        timeAgo="Today at 05:06 PM"
+        commentText={faker.lorem.sentence()}
+        avatar={faker.image.avatar()}
+      />
     </div>
   );
 };
